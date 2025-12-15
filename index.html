@@ -55,10 +55,28 @@
   <div id="error" class="error"></div>
 
   <div id="chatBox">
-    <h3>Private Anonymous Chat</h3>
-    <iframe src="https://tlk.io/ak92Kf_71QpX"></iframe>
+    <h3>complete Anonymous Chat</h3>
+    <iframe src="https://tlk.io/ak92of_71QpX"></iframe>
   </div>
 
   <script>
-    function checkPassword
+    function checkPassword() {
+      const correctPassword = "alayna"; // CHANGE THIS
+      const entered = document.getElementById("password").value;
+
+      if (entered === correctPassword) {
+        document.querySelector("h2").style.display = "none";
+        document.getElementById("password").style.display = "none";
+        document.querySelector("button").style.display = "none";
+        document.getElementById("error").style.display = "none";
+        document.getElementById("chatBox").style.display = "block";
+      } else {
+        document.getElementById("error").innerText = "Wrong password";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
 
