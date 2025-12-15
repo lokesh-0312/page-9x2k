@@ -3,7 +3,6 @@
 <head>
   <title>Private Chat</title>
 
-  <!-- Prevent Google indexing -->
   <meta name="robots" content="noindex, nofollow">
 
   <style>
@@ -12,23 +11,54 @@
       background: #111;
       color: white;
       text-align: center;
+      margin-top: 100px;
     }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    #chatBox {
+      display: none;
+      margin-top: 20px;
+    }
+
     iframe {
-      border: none;
       width: 95%;
       height: 500px;
-      margin-top: 20px;
+      border: none;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
     }
   </style>
 </head>
 
 <body>
-  <h2>Private Anonymous Chat</h2>
 
-  <iframe 
-    src="https://tlk.io/ak92Kf_71QpX"
-    allowfullscreen>
-  </iframe>
+  <h2>Enter Password</h2>
 
-</body>
-</html>
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="checkPassword()">Enter</button>
+
+  <div id="error" class="error"></div>
+
+  <div id="chatBox">
+    <h3>Private Anonymous Chat</h3>
+    <iframe src="https://tlk.io/ak92Kf_71QpX"></iframe>
+  </div>
+
+  <script>
+    function checkPassword
+
